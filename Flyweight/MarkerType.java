@@ -5,16 +5,23 @@ import java.awt.*;
 public class MarkerType {
     private String iconType;
     private String color;
-    private String labelStyle;
 
-    public MarkerType(String iconType, String color, String labelStyle) {
+
+    public MarkerType(String iconType, String color) {
         this.iconType = iconType;
         this.color = color;
-        this.labelStyle = labelStyle;
     }
 
-    public void draw(Graphics g) {
-        g.setColor(Color.black);
-        g.drawString(iconType, 10, 20);
+    public String getIconType() {
+        return iconType;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void draw(int x, int y, String name) {
+        System.out.println("Render marker - " + name + " on (" + x + ", " + y + ")" +
+                " with  " + iconType + ", color " + color);
     }
 }

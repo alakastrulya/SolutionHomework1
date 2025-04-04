@@ -5,14 +5,23 @@ import java.awt.*;
 public class Marker {
     private int x;
     private int y;
-    private MarkerType markerType;
+    private String markerType;
 
-    public Marker(int x, int y, MarkerType markerType) {
+    public Marker(int x, int y, String markerType) {
         this.x = x;
         this.y = y;
         this.markerType = markerType;
     }
-    public void draw(Graphics g) {
-        markerType.draw(g,x,y);
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public String getMarkerType() {
+        return markerType;
     }
 }
